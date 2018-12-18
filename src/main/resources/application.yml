@@ -1,0 +1,42 @@
+#This should be the default properties
+server:
+  port: 8081
+prefixone:
+  host: "prefixOneHost"
+  port: 8081
+  test:
+    config: "this config is for prefix One"
+
+prefixtwo:
+  host: "prefixTwoHost"
+  port: 8081
+  test:
+    config: "This config is for prefix two"
+---
+spring:
+  profiles: test
+prefixone:
+  host: "prefixOneHostForTest"
+  port: 8081
+  test:
+    config: "this config is for prefix One"
+
+prefixtwo:
+  host: "prefixTwoHostForTest"
+  port: 8081
+  test:
+    config: "This config is for prefix two"
+---
+spring:
+  profiles: acceptance
+prefixone:
+  host: "prefixOneHost"
+  port: 8081
+  test:
+    config: "this config is for prefix One"
+
+prefixtwo:
+  host: "prefixTwoHost"
+  port: 8081
+  test:
+    config: "This config is for prefix two"
